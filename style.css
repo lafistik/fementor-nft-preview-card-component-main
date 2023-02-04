@@ -1,0 +1,59 @@
+:root {
+  --clr-primary-blue: hsl(215, 51%, 70%);
+  --clr-primary-cyan: hsl(178, 100%, 50%);
+
+  --clr-neutral-900: hsl(217, 54%, 11%);
+  --clr-neutral-800: hsl(216, 50%, 16%);
+  --clr-neutral-700: hsl(215, 32%, 27%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+
+  --fs-regular: 1.125rem;
+  --ff-regular: "Outfit", sans-serif;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-semi-bold: 600;
+}
+
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
