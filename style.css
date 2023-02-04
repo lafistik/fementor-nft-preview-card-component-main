@@ -2,12 +2,14 @@
   --clr-primary-blue: hsl(215, 51%, 70%);
   --clr-primary-cyan: hsl(178, 100%, 50%);
 
+  --clr-background-cyan-transparent: hsla(178, 100%, 50%, 0.699);
+
   --clr-neutral-900: hsl(217, 54%, 11%);
   --clr-neutral-800: hsl(216, 50%, 16%);
   --clr-neutral-700: hsl(215, 32%, 27%);
   --clr-neutral-100: hsl(0, 0%, 100%);
 
-  --fs-regular: 1.125rem;
+  /* --fs-regular: 1.125rem; */
   --ff-regular: "Outfit", sans-serif;
   --fw-light: 300;
   --fw-regular: 400;
@@ -56,4 +58,115 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
+}
+
+body {
+  background-color: var(--clr-neutral-900);
+  font-family: var(--ff-regular);
+  /* font-size: var(--fs-regular); */
+  font-weight: var(--fw-regular);
+  color: var(--clr-primary-blue);
+  /* color: var(--clr-neutral-700); */
+
+  display: grid;
+  place-content: center;
+}
+
+a {
+  color: var(--clr-neutral-100);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover,
+a:active {
+  color: var(--clr-primary-cyan);
+}
+
+.nft-card {
+  background-color: var(--clr-neutral-800);
+  max-width: 325px;
+
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
+.image-container {
+  position: relative;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.image-container:hover .overlay,
+.image-container:active .overlay {
+  opacity: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.3s ease;
+  background-color: var(--clr-background-cyan-transparent);
+  border-radius: inherit;
+
+  display: grid;
+  place-content: center;
+}
+
+.nft__title {
+  font-size: 1.3125rem;
+  margin-bottom: 1.25rem;
+  margin-top: 1.875rem;
+  line-height: 1.1;
+
+  cursor: pointer;
+}
+
+.nft__title:hover {
+  color: var(--clr-primary-cyan);
+}
+
+.nft__description {
+  font-size: 1rem;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--clr-neutral-700);
+  padding-bottom: 1rem;
+}
+
+.nft__price {
+  color: var(--clr-primary-cyan);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nft__days-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nft__creator {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nft__creator-image {
+  width: 32px;
+  border: 1px solid var(--clr-neutral-100);
+  border-radius: 100rem;
 }
